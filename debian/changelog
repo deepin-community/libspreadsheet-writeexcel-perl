@@ -1,0 +1,401 @@
+libspreadsheet-writeexcel-perl (2.40-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 12:04:27 +0100
+
+libspreadsheet-writeexcel-perl (2.40-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop pod-encoding.patch, not needed anymore.
+  * Drop lintian override, not needed anymore.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 08 Nov 2013 23:15:13 +0100
+
+libspreadsheet-writeexcel-perl (2.39-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove unneeded build-dependencies.
+  * Refresh pod-encoding.patch; partly applied upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 11 Oct 2013 23:00:25 +0200
+
+libspreadsheet-writeexcel-perl (2.38-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * New upstream release.
+    'Fixes' "FTBFS with perl 5.18: POD" by removing the failing test.
+    The POD still has errors, as detected by lintian
+    (manpage-has-errors-from-pod2man).
+    (Closes: #710995)
+  * Add patch to declare the POD encoding; this fixes the actual problem
+    behind #710995.
+  * Switch to "3.0 (quilt)" source format.
+  * debian/copyright: switch formatting to Copyright-Format 1.0. Update
+    copyright years and license stanzas.
+  * Bump debhelper compatibility level to 8.
+  * Set Standards-Version to 3.9.4 (no further changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 05 Jun 2013 20:11:55 +0200
+
+libspreadsheet-writeexcel-perl (2.37-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version 3.8.4 (no changes)
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Wed, 03 Feb 2010 11:51:40 -0500
+
+libspreadsheet-writeexcel-perl (2.36-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Add myself to Uploaders
+  * debian/copyright: Add myself to debian/* section
+
+ -- Brian Cassidy <brian.cassidy@gmail.com>  Fri, 22 Jan 2010 10:23:20 -0400
+
+libspreadsheet-writeexcel-perl (2.35-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 10 Jan 2010 21:31:20 -0500
+
+libspreadsheet-writeexcel-perl (2.34-1) unstable; urgency=low
+
+  * New upstream release
+  * Use index.html now provided upstream
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 08 Jan 2010 10:47:32 -0500
+
+libspreadsheet-writeexcel-perl (2.33-1) unstable; urgency=low
+
+  * New upstream release
+    + Adds support for embedded charts
+  * Example charts now called external_charts
+  * Drop POD spelling patch, applied upstream
+  * Add doc-base control file for installed .html help
+  * Refresh copyright information to new DEP5 format
+  * Update lintian override for this version
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Mon, 04 Jan 2010 16:07:34 -0500
+
+libspreadsheet-writeexcel-perl (2.32-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Requires new libole-storage-lite-perl for Gnumeric
+  * Upstream changed 'doc' -> 'docs'
+  * Add a patch to fix some typos
+  * Use an override where the spelling error isn't a typo
+
+  [ gregor herrmann ]
+  * debian/control: add libole-storage-lite-perl to Recommends, needed by
+    /usr/bin/chartex; thanks to Anders Henke for the bug report
+    (closes: #548056).
+  * Update parts of debian/copyright.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 31 Dec 2009 17:20:19 -0500
+
+libspreadsheet-writeexcel-perl (2.28-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 22 Nov 2009 07:46:51 -0500
+
+libspreadsheet-writeexcel-perl (2.26-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Standards-Version 3.8.3
+  * Add unversioned perl dependency, it's not essential
+  * Add myself to Uploaders and Copyright
+  * Rewrite control description
+  * Add libspreadsheet-parseexcel-perl to Suggests
+  * Update to new short debhelper rules format
+  * Refresh copyright file
+  * Move 'doc' -> 'html' in package
+  * Remove duplicate charts.pod (same as charts.txt, pod2text'ized)
+  * Remove double-installed chartex.pl (installed as /usr/bin/chartex)
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+  * debian/copyright: update years of upstream copyright.
+  * Activate new tests.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 13 Nov 2009 08:30:36 -0500
+
+libspreadsheet-writeexcel-perl (2.25-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove lintian override, not needed any more.
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}.
+  * debian/copyright: change to the new format.
+  * Don't install README any more.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 09 Sep 2008 17:55:49 +0200
+
+libspreadsheet-writeexcel-perl (2.23-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 11 Aug 2008 15:19:36 -0500
+
+libspreadsheet-writeexcel-perl (2.22-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: add information for ./examples/datecalc1.pl and
+    lib/Spreadsheet/WriteExcel/WorkbookBig.pm.
+  * debian/control: change my email address.
+  * Set Standards-Version to 3.8.0 (no changes).
+  * Refresh debian/rules, no functional changes; except: install HTML docs
+    into a separate directory and install charts directory as examples.
+  * Add a lintian-override for a warning about a long line in a manpage which
+    is caused by a long URL.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 20 Jul 2008 15:29:48 +0200
+
+libspreadsheet-writeexcel-perl (2.21-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: update years of copyright.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sun, 16 Mar 2008 03:11:50 +0100
+
+libspreadsheet-writeexcel-perl (2.20-2) unstable; urgency=low
+
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza). Removed: XS-Vcs-Svn fields.
+  * debian/watch: 
+    - remove "-" as allowed character in regexp for matching upstream version
+    - use dist-based URL.
+  * debian/rules:
+    - delete /usr/lib/perl5 only if it exists (closes: #467956)
+    - update with the help of dh-make-perl's templates
+    - don't try to fix characters in manpages -- not needed anymore
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Set debhelper compatibility level to 6.
+  * debian/copyright: convert to UTF-8 and use arabic numbers for the years.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sun, 02 Mar 2008 00:42:25 +0100
+
+libspreadsheet-writeexcel-perl (2.20-1) unstable; urgency=low
+
+  * New upstream release
+    + Improvements in chart and image handling
+    + more explicit method names for unicode strings
+
+  * debian/copyright:
+    + freshen-up copyright years
+    + quote Perl license
+  * debian/control:
+    + Add Homepage field
+    + Add myself to Uploaders (wrapped)
+  * debian/rules: cleanup
+    + drop unused dh_installdirs and other unused commented stuff
+  * debian/watch
+    + version=3
+    + escape dots in ".tar.gz"
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 09 Oct 2007 09:44:20 +0300
+
+libspreadsheet-writeexcel-perl (2.18-2) unstable; urgency=low
+
+  * Add libdate-calc-perl and libdate-manip-perl to Recommends: in
+    debian/control, thanks to Arndt Schoenewald (closes: #429521).
+  * Replace DH_COMPAT in debian/rules by debian/compat (thanks to lintian).
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Mon, 18 Jun 2007 22:37:02 +0200
+
+libspreadsheet-writeexcel-perl (2.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * Activate dh_md5sums in debian/rules.
+  * Add libole-storage-lite-perl to build dependencies.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Thu, 25 Jan 2007 16:59:30 +0100
+
+libspreadsheet-writeexcel-perl (2.17-1) unstable; urgency=low
+
+  * New upstream release.
+  * Set Standards-Version to 3.7.2 (no changes required).
+  * Move debhelper to Build-Depends.
+  * Set debhelper compatibility level to 5.
+  * Remove empty /usr/lib/perl5 directory from binary package.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Mon, 22 May 2006 23:44:26 +0200
+
+libspreadsheet-writeexcel-perl (2.16-1) unstable; urgency=low
+
+  * New upstream release
+  * Why "make test" if it will be ignored? Die on failure.
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 16 Jan 2006 18:32:27 -0600
+
+libspreadsheet-writeexcel-perl (2.15-1) unstable; urgency=low
+
+  * New upstream release
+  * Bumped up standards-version to 3.6.2
+  * Moved DH compat level to 4
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 11 Nov 2005 16:27:40 -0600
+
+libspreadsheet-writeexcel-perl (2.14-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sat, 14 May 2005 17:54:42 -0500
+
+libspreadsheet-writeexcel-perl (2.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 22 Apr 2005 19:22:33 -0500
+
+libspreadsheet-writeexcel-perl (2.12-1) unstable; urgency=medium
+
+  * New upstream release, improving UTF8 handling (Closes: #297571)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue,  5 Apr 2005 18:17:43 -0500
+
+libspreadsheet-writeexcel-perl (2.11-2) unstable; urgency=low
+
+  * Modified source package name to libspreadsheet-writeexcel-perl to be
+    consistent with Perl package naming scheme
+  * New maintainer - Debian Perl Group <pkg-perl-
+    maintainer@lists.alioth.debian.org> via Gunnar Wolf
+    <gwolf@debian.org>
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 25 Jan 2005 09:19:42 -0600
+
+spreadsheet-writeexcel (2.11-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu, 14 Oct 2004 20:57:51 -0500
+
+spreadsheet-writeexcel (2.10-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/copyright: Correct typo in URL (Closes: #272138)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 29 Sep 2004 21:08:47 -0500
+
+spreadsheet-writeexcel (2.04-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/watch: Direct to by-module rather than by-author
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 23 Aug 2004 21:07:07 -0500
+
+spreadsheet-writeexcel (2.03-1) unstable; urgency=low
+
+  * New upstream release (Closes: #258760)
+  * debian/control: Refer to OpenOffice as OpenOffice.org (Closes: #254044)
+  
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 11 Jul 2004 08:15:47 -0500
+
+spreadsheet-writeexcel (2.02-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed,  2 Jun 2004 20:25:34 -0500
+
+spreadsheet-writeexcel (0.43-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.43 (Closes: #250522)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 24 May 2004 21:33:40 -0500
+
+spreadsheet-writeexcel (0.42-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.42 
+  * debian/control: Standards-Version upgraded to 3.6.0.1
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 27 Aug 2003 14:24:53 -0500
+
+spreadsheet-writeexcel (0.41-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.41 
+  * debian/control: Section changed to perl
+  * debian/control: Standards-Version upgraded to 3.5.9
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 28 Apr 2003 21:06:28 -0500
+
+spreadsheet-writeexcel (0.40-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.40 released today
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 22 Dec 2002 08:19:34 -0600
+
+spreadsheet-writeexcel (0.39-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.39
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 25 Sep 2002 07:23:13 -0500
+
+spreadsheet-writeexcel (0.38-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.38
+  * debian/control: Upgraded to Debian Policy 3.5.6
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri, 30 Aug 2002 06:09:09 -0500
+
+spreadsheet-writeexcel (0.37-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.37
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue, 30 Apr 2002 07:19:35 -0500
+
+spreadsheet-writeexcel (0.36-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.36
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 10 Apr 2002 20:02:58 -0500
+
+spreadsheet-writeexcel (0.35-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.35
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 20 Mar 2002 10:20:56 -0600
+
+spreadsheet-writeexcel (0.34-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.34
+  * debian/copyright: Corrected common-license/GPL file ref (lintian)
+  * debian/control: Added real Depends package to virtual one (lintian)
+  
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue, 23 Oct 2001 20:54:22 -0500
+
+spreadsheet-writeexcel (0.33-1) unstable; urgency=low
+
+  * Upgraded to upstream version 0.33 (Closes: #107889)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue,  7 Aug 2001 19:51:05 -0500
+
+spreadsheet-writeexcel (0.32-2) unstable; urgency=low
+
+  * debian/control: Depends on libparse-recdescent-perl (Closes: #99900)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu,  7 Jun 2001 17:58:32 -0500
+
+spreadsheet-writeexcel (0.32-1) unstable; urgency=low
+
+  * Initial Debian release following WNPP heads-up (Closes: #98136)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 27 May 2001 10:29:30 -0500

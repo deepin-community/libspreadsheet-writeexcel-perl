@@ -1,0 +1,11 @@
+Document: libspreadsheet-writeexcel-perl
+Title: Spreadsheet::WriteExcel User Manual
+Author: John McNamara <jmcnamara@cpan.org>
+Abstract: This manual describes the Spreadsheet::WriteExcel
+ programming interface. It includes an article published in
+ The Perl Journal which discusses its use and applications.
+Section: Programming/Perl
+
+Format: HTML
+Index: /usr/share/doc/libspreadsheet-writeexcel-perl/html/index.html
+Files: /usr/share/doc/libspreadsheet-writeexcel-perl/html/*.html

@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	AUTOMATED_TESTING=1 dh_auto_test
+
+override_dh_installdocs:
+	dh_installdocs
+	mv -f $(TMP)/usr/share/doc/$(PACKAGE)/docs/ \
+		$(TMP)/usr/share/doc/$(PACKAGE)/html/
+
+override_dh_installexamples:
+	dh_installexamples
+	rm $(TMP)/usr/share/doc/$(PACKAGE)/examples/external_charts/external_charts.pod
+	rm $(TMP)/usr/share/doc/$(PACKAGE)/examples/external_charts/chartex.pl
